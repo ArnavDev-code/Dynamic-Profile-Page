@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign-Up Page</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Section -->
+        <div class="form-container login-container">
+            <h2>Login</h2>
+            <form onsubmit="handleLogin(event)">
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" name="username" placeholder="Enter your username" required>
+
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+
+                <button type="submit">Log In</button>
+                <p class="toggle" onclick="showSignUp()">Don't have an account? Create one</p>
+            </form>
+        </div>
+
+        <!-- Sign-Up Section -->
+        <div class="form-container signup-container">
+            <h2>Sign Up</h2>
+            <form onsubmit="handleSignUp(event)">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
+
+                <label for="signup-repassword">Re-enter Password</label>
+                <input type="password" id="signup-repassword" name="repassword" placeholder="Re-enter your password" required>
+
+                <button type="submit">Sign Up</button>
+                <p class="toggle" onclick="showLogin()">Already have an account? Log in</p>
+            </form>
+        </div>
+    </div>
+    <script src="log.js"></script>
+</body>
+</html>

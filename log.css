@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #000303, #182e77,#000000);
+    overflow: hidden;
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    position: sticky;
+    box-shadow: 0 8px 20px rgb(247, 247, 247);
+    border-radius: 15px;
+    overflow: hidden;
+    background: url('https://cdn.discordapp.com/attachments/1305950343435386923/1309817881072238652/Screenshot_from_2024-11-23_15-18-01.png?ex=6742f676&is=6741a4f6&hm=be469f33f0cb1b35c7f5b214ee2cb68b19cf5b4857169e2c7168973cdfa8460a&') no-repeat right center;
+    background-size: contain;
+    background-color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.form-container {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.login-container {
+    left: 0;
+    transform: translateX(0);
+}
+
+.signup-container {
+    right: 0;
+    transform: translateX(100%);
+}
+
+.form-container.active {
+    transform: translateX(-80%);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+form {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background: #2575fc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #1bb86f;
+}
+
+.toggle {
+    font-size: 14px;
+    color: #2575fc;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.toggle:hover {
+    text-decoration: underline;
+}
